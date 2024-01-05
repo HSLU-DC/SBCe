@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block body %}
+<h1>Home</h1>
+{% for view, args in pages %}
+<a href="{{ url_for(view, **args) }}">{{ args['page'] }}</a>
+{% endfor %}
+{% endblock %}
